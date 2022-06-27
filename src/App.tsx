@@ -4,7 +4,7 @@ import Loader from "./components/Loader";
 // eslint-disable-next-line require-jsdoc
 function App() {
   return (
-    <main className="min-h-screen h-full bg-primary">
+    <main className="min-h-screen h-full bg-primary font-poppins">
       <Loader />
     </main>
   );
