@@ -1,11 +1,11 @@
 import React from "react";
-import Loader from "./components/Loader";
+import IMageUpload from "./components/ImageUpload";
 
 // eslint-disable-next-line require-jsdoc
 function App() {
   return (
     <main className="min-h-screen h-full bg-primary font-poppins">
-      <Loader />
+      <IMageUpload />
     </main>
   );
 }
