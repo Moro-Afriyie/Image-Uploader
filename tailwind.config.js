@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       animation: {
-        loading: "loading 2.5s linear infinite",
+        loading: "loading 2s linear infinite",
       },
     },
   },
