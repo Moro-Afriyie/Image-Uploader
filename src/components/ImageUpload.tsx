@@ -2,7 +2,9 @@ import * as React from "react";
 import image from "../assets/image.svg";
 import Loader from "./Loader";
 
-interface IIMageUploadProps {}
+interface IIMageUploadProps {
+  setImageURl: React.Dispatch<React.SetStateAction<string>>;
+}
 
 const IMageUpload: React.FunctionComponent<IIMageUploadProps> = (props) => {
   const [fileName, setFileName] = React.useState("");

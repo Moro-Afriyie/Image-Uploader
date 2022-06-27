@@ -11,7 +11,6 @@ const PreviewImage: React.FunctionComponent<IPreviewImageProps> = ({
   imageUrl,
 }) => {
   const [copied, setCopied] = useState(false);
-  console.log(copied);
 
   return (
     <section className="min-h-screen flex items-center justify-center w-full bg-greybg">
@@ -28,7 +27,7 @@ const PreviewImage: React.FunctionComponent<IPreviewImageProps> = ({
         <div
           className="h-[13.625rem] bg-cover bg-center bg-no-repeat relative w-full rounded-xl overflow-hidden"
           style={{
-            backgroundImage: `url('${imageUrl}')')`,
+            backgroundImage: `url('${imageUrl}')`,
           }}
         ></div>
         <div className="w-full px-[0.1rem] h-[2.125rem] rounded-lg border border-[#E0E0E0] items-center flex gap-4">
