@@ -10,6 +10,7 @@ module.exports = {
         primary: "#fafafb",
         greybg: "#f2f2f2",
         "primary-blue": "#2F80ED",
+        "dark-grey": "#F6F8FB",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -23,6 +24,10 @@ module.exports = {
       },
       animation: {
         loading: "loading 2s linear infinite",
+      },
+      backgroundImage: {
+        dashed:
+          "url('data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e')",
       },
     },
   },

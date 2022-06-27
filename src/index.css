@@ -2,3 +2,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.box {
+  background-image: repeating-linear-gradient(
+      0deg,
+      #97bef4,
+      #97bef4 11px,
+      transparent 11px,
+      transparent 19px,
+      #97bef4 19px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #97bef4,
+      #97bef4 11px,
+      transparent 11px,
+      transparent 19px,
+      #97bef4 19px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #97bef4,
+      #97bef4 11px,
+      transparent 11px,
+      transparent 19px,
+      #97bef4 19px
+    ),
+    repeating-linear-gradient(
+      270deg,
+      #97bef4,
+      #97bef4 11px,
+      transparent 11px,
+      transparent 19px,
+      #97bef4 19px
+    );
+  background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}
