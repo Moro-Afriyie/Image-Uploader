@@ -24,12 +24,9 @@ const PreviewImage: React.FunctionComponent<IPreviewImageProps> = ({
             Uploaded Successfully!
           </h1>
         </div>
-        <div
-          className="h-[13.625rem] bg-cover bg-center bg-no-repeat relative w-full rounded-xl overflow-hidden"
-          style={{
-            backgroundImage: `url('${imageUrl}')`,
-          }}
-        ></div>
+        <div className="h-[13.625rem] bg-contain bg-center bg-no-repeat relative w-full rounded-xl overflow-hidden">
+          <img src={imageUrl} alt="image" className="w-full h-full" />
+        </div>
         <div className="w-full px-[0.1rem] h-[2.125rem] rounded-lg border border-[#E0E0E0] items-center flex gap-4">
           <p className="text-[0.5rem] ml-2 overflow-hidden whitespace-nowrap text-ellipsis">
             {imageUrl}

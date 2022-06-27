@@ -1,3 +1,4 @@
+import axios from "axios";
 import * as React from "react";
 import image from "../assets/image.svg";
 import Loader from "./Loader";
@@ -6,20 +7,26 @@ interface IIMageUploadProps {
   setImageURl: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const IMageUpload: React.FunctionComponent<IIMageUploadProps> = (props) => {
-  const [fileName, setFileName] = React.useState("");
+const IMageUpload: React.FunctionComponent<IIMageUploadProps> = ({
+  setImageURl,
+}) => {
   const [loading, setLoading] = React.useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files) return;
-
-    console.log(e.target.files);
+    const formData = new FormData();
     const file = e.target.files[0];
     if (file) {
       setLoading(true);
+      formData.append("file", file);
+      formData.append("upload_preset", "my_uploads");
+      const data = await axios.post(
+        "https://api.cloudinary.com/v1_1/moroafriyie/image/upload",
+        formData
+      );
+      setImageURl(data.data.secure_url);
+      setLoading(false);
     }
-    setFileName(file.name);
-    console.log(fileName);
   };
 
   const dragOver = (e: React.ChangeEvent<HTMLInputElement>) => {
