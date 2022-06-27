@@ -1,9 +1,12 @@
 import React from "react";
+import Loader from "./components/Loader";
 
 // eslint-disable-next-line require-jsdoc
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-red-900">Hello world!</h1>
+    <main className="min-h-screen h-full">
+      <Loader />
+    </main>
   );
 }
 
